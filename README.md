@@ -55,6 +55,7 @@ ES-DE is strict about theme files: one wrong tag stops the theme loading. The er
 - **Console picture:** drop a PNG named exactly like the system into `art/systems/` (for example `snes.png`). A system with no picture shows its name as text.
 - **Animation speed (Batocera):** change the `duration="..."` values, which are in milliseconds.
 - **Colours:** raspberry is `C51A4A` and leaf green is `75A928`.
+- **Check for overlaps after editing:** run `python3 tools/check_layout.py rpi-berry-theme/theme.xml rpi-berry-theme-es-de/theme.xml`. It lists any two on-screen elements whose boxes overlap (panels behind text are ignored).
 - **Move the carousel:** change the `y` values of the carousel, `carousel_band` / `carouselBand` and the two lines.
 
 ## Performance

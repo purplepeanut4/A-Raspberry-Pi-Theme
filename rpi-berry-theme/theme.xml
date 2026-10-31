@@ -166,8 +166,8 @@
     </text>
 
     <helpsystem name="help">
-      <pos>0.98 0.06</pos>
-      <origin>1 0.5</origin>
+      <pos>0.5 0.96</pos>
+      <origin>0.5 0.5</origin>
       <textColor>B8D8B0</textColor>
       <iconColor>C51A4A</iconColor>
       <fontPath>./art/fonts/DejaVuSans.ttf</fontPath>
@@ -334,7 +334,7 @@
       <zIndex>20</zIndex>
     </rating>
     <datetime name="md_releasedate">
-      <pos>0.97 0.55</pos>
+      <pos>0.955 0.55</pos>
       <origin>1 0</origin>
       <size>0.2 0.035</size>
       <fontPath>./art/fonts/DejaVuSans.ttf</fontPath>
@@ -356,8 +356,8 @@
     </text>
 
     <helpsystem name="help">
-      <pos>0.98 0.06</pos>
-      <origin>1 0.5</origin>
+      <pos>0.5 0.96</pos>
+      <origin>0.5 0.5</origin>
       <textColor>B8D8B0</textColor>
       <iconColor>C51A4A</iconColor>
       <fontPath>./art/fonts/DejaVuSans.ttf</fontPath>
@@ -432,8 +432,8 @@
       <zIndex>20</zIndex>
     </gamegrid>
     <helpsystem name="help">
-      <pos>0.98 0.06</pos>
-      <origin>1 0.5</origin>
+      <pos>0.5 0.96</pos>
+      <origin>0.5 0.5</origin>
       <textColor>B8D8B0</textColor>
       <iconColor>C51A4A</iconColor>
       <fontPath>./art/fonts/DejaVuSans.ttf</fontPath>

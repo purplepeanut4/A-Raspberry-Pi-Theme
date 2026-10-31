@@ -95,8 +95,8 @@
         </animation>
 
         <helpsystem name="help">
-            <pos>0.98 0.06</pos>
-            <origin>1 0.5</origin>
+            <pos>0.5 0.96</pos>
+            <origin>0.5 0.5</origin>
             <textColor>B8D8B0</textColor>
             <iconColor>${accent}</iconColor>
             <fontPath>${fontMain}</fontPath>
@@ -278,7 +278,7 @@
         </rating>
         <datetime name="gameReleaseDate">
             <metadata>releasedate</metadata>
-            <pos>0.96 0.565</pos>
+            <pos>0.955 0.565</pos>
             <origin>1 0.5</origin>
             <size>0.2 0.035</size>
             <fontPath>${fontMain}</fontPath>
