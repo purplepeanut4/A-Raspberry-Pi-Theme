@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  RASPBERRY CIRCUIT - ES-DE version
+  ==================================================================
+  Same rules as HTML: <tag> ... </tag>.
+    pos / size  = fractions of the screen (0.5 = halfway)
+    origin      = which point of the element "pos" refers to
+    colors      = 6-digit hex, no #   (add 2 more digits for transparency)
+    zIndex      = layering, higher numbers draw on top
+    ${accent}   = a variable, defined in the colorScheme blocks below
+  ES-DE is strict: one typo in a tag name and the theme won't load.
+  Start ES-DE in debug mode (see README) to see exactly what it complains about.
+-->
+<theme>
+
+    <!-- Accent colours (the user picks one in UI Settings) -->
+    <colorScheme name="raspberry">
+        <variables>
+            <accent>C51A4A</accent>
+            <accentEnd>8E1237</accentEnd>
+            <accentAlt>75A928</accentAlt>
+        </variables>
+    </colorScheme>
+    <colorScheme name="leaf">
+        <variables>
+            <accent>75A928</accent>
+            <accentEnd>4E7A18</accentEnd>
+            <accentAlt>C51A4A</accentAlt>
+        </variables>
+    </colorScheme>
+
+    <variables>
+        <fontMono>./art/fonts/DejaVuSansMono-Bold.ttf</fontMono>
+        <fontMain>./art/fonts/DejaVuSans.ttf</fontMain>
+    </variables>
+
+    <!-- ============ Things shown in BOTH the system and game list views ============ -->
+    <view name="system, gamelist">
+
+        <!-- still picture (also what you see if the video can't play) -->
+        <image name="backgroundStill">
+            <path>./art/background.jpg</path>
+            <pos>0 0</pos>
+            <size>1 1</size>
+            <stationary>always</stationary>
+            <zIndex>0</zIndex>
+        </image>
+
+        <!-- ANIMATION 1: looping circuit-board video -->
+        <video name="backgroundVideo">
+            <path>./art/background.mp4</path>
+            <pos>0 0</pos>
+            <size>1 1</size>
+            <audio>false</audio>
+            <stationary>always</stationary>
+            <zIndex>1</zIndex>
+        </video>
+
+        <!-- header bar -->
+        <image name="headerBar">
+            <path>./art/solid.png</path>
+            <pos>0 0</pos>
+            <size>1 0.12</size>
+            <color>060E09D0</color>
+            <stationary>always</stationary>
+            <zIndex>10</zIndex>
+        </image>
+        <image name="headerLine">
+            <path>./art/solid.png</path>
+            <pos>0 0.12</pos>
+            <size>1 0.006</size>
+            <color>${accent}</color>
+            <stationary>always</stationary>
+            <zIndex>11</zIndex>
+        </image>
+
+        <!-- ANIMATION 2: bobbing berry (animated GIF) -->
+        <animation name="berry">
+            <path>./art/berry_bob.gif</path>
+            <pos>0.025 0.06</pos>
+            <origin>0 0.5</origin>
+            <maxSize>0.09 0.1</maxSize>
+            <stationary>always</stationary>
+            <zIndex>12</zIndex>
+        </animation>
+
+        <!-- ANIMATION 3: blinking PWR / ACT board LEDs (animated GIF) -->
+        <animation name="boardLeds">
+            <path>./art/leds.gif</path>
+            <pos>0.095 0.06</pos>
+            <origin>0 0.5</origin>
+            <maxSize>0.06 0.07</maxSize>
+            <stationary>always</stationary>
+            <zIndex>12</zIndex>
+        </animation>
+
+        <helpsystem name="help">
+            <pos>0.98 0.06</pos>
+            <origin>1 0.5</origin>
+            <textColor>B8D8B0</textColor>
+            <iconColor>${accent}</iconColor>
+            <fontPath>${fontMain}</fontPath>
+            <fontSize>0.022</fontSize>
+        </helpsystem>
+    </view>
+
+    <!-- ===================== SYSTEM (main) SCREEN ===================== -->
+    <view name="system">
+
+        <text name="title">
+            <text>BERRY BOX</text>
+            <pos>0.17 0.06</pos>
+            <origin>0 0.5</origin>
+            <size>0.19 0.08</size>
+            <fontPath>${fontMono}</fontPath>
+            <fontSize>0.05</fontSize>
+            <color>FFFFFF</color>
+            <horizontalAlignment>left</horizontalAlignment>
+            <verticalAlignment>center</verticalAlignment>
+            <zIndex>12</zIndex>
+        </text>
+
+        <!-- Dark strip behind the carousel so it stays readable over the photo -->
+        <image name="carouselBand">
+            <path>./art/solid.png</path>
+            <pos>0 0.42</pos>
+            <size>1 0.32</size>
+            <color>060E09C0</color>
+            <zIndex>30</zIndex>
+        </image>
+        <image name="carouselLineTop">
+            <path>./art/solid.png</path>
+            <pos>0 0.42</pos>
+            <size>1 0.003</size>
+            <color>${accent}</color>
+            <zIndex>31</zIndex>
+        </image>
+        <image name="carouselLineBottom">
+            <path>./art/solid.png</path>
+            <pos>0 0.737</pos>
+            <size>1 0.003</size>
+            <color>${accentAlt}</color>
+            <zIndex>31</zIndex>
+        </image>
+
+        <!-- The row of systems. If a logo file is missing, ES-DE shows the system's name as text instead. -->
+        <carousel name="systemCarousel">
+            <type>horizontal</type>
+            <pos>0 0.58</pos>
+            <size>1 0.30</size>
+            <origin>0 0.5</origin>
+            <staticImage>./art/systems/${system.theme}.png</staticImage>
+            <itemSize>0.20 0.22</itemSize>
+            <itemScale>1.3</itemScale>
+            <maxItemCount>3</maxItemCount>
+            <unfocusedItemOpacity>0.4</unfocusedItemOpacity>
+            <color>00000000</color>
+            <fontPath>${fontMono}</fontPath>
+            <fontSize>0.05</fontSize>
+            <textColor>B8D8B0</textColor>
+            <textSelectedColor>FFFFFF</textSelectedColor>
+            <zIndex>50</zIndex>
+        </carousel>
+
+        <!-- "123 games available" pill -->
+        <image name="infoBar">
+            <path>./art/solid.png</path>
+            <pos>0.5 0.885</pos>
+            <origin>0.5 0.5</origin>
+            <size>0.30 0.07</size>
+            <color>060E09CD</color>
+            <zIndex>40</zIndex>
+        </image>
+        <text name="gameCount">
+            <systemdata>gamecount</systemdata>
+            <pos>0.5 0.885</pos>
+            <origin>0.5 0.5</origin>
+            <size>0.30 0.07</size>
+            <fontPath>${fontMain}</fontPath>
+            <fontSize>0.03</fontSize>
+            <color>B8D8B0</color>
+            <horizontalAlignment>center</horizontalAlignment>
+            <verticalAlignment>center</verticalAlignment>
+            <zIndex>45</zIndex>
+        </text>
+    </view>
+
+    <!-- ===================== GAME LIST SCREEN ===================== -->
+    <view name="gamelist">
+
+        <!-- system name in the header -->
+        <!-- picture of the console (art/systems/<system>.png) -->
+        <image name="systemIcon">
+            <path>./art/systems/${system.theme}.png</path>
+            <pos>0.17 0.06</pos>
+            <origin>0 0.5</origin>
+            <maxSize>0.07 0.1</maxSize>
+            <zIndex>12</zIndex>
+        </image>
+        <text name="systemName">
+            <text>${system.fullName}</text>
+            <pos>0.25 0.06</pos>
+            <origin>0 0.5</origin>
+            <size>0.4 0.08</size>
+            <fontPath>${fontMono}</fontPath>
+            <fontSize>0.04</fontSize>
+            <color>FFFFFF</color>
+            <horizontalAlignment>left</horizontalAlignment>
+            <verticalAlignment>center</verticalAlignment>
+            <zIndex>12</zIndex>
+        </text>
+
+        <!-- left: list panel -->
+        <image name="listPanel">
+            <path>./art/solid.png</path>
+            <pos>0.03 0.16</pos>
+            <size>0.47 0.66</size>
+            <color>060E09CD</color>
+            <zIndex>10</zIndex>
+        </image>
+        <image name="listEdge">
+            <path>./art/solid.png</path>
+            <pos>0.03 0.16</pos>
+            <size>0.004 0.66</size>
+            <color>${accentAlt}</color>
+            <zIndex>11</zIndex>
+        </image>
+
+        <textlist name="gameList">
+            <pos>0.04 0.17</pos>
+            <size>0.45 0.64</size>
+            <fontPath>${fontMain}</fontPath>
+            <fontSize>0.032</fontSize>
+            <lineSpacing>1.3</lineSpacing>
+            <primaryColor>B8D8B0</primaryColor>
+            <secondaryColor>7FA37A</secondaryColor>
+            <selectedColor>FFFFFF</selectedColor>
+            <selectorColor>${accent}</selectorColor>
+            <selectorColorEnd>${accentEnd}</selectorColorEnd>
+            <horizontalMargin>0.01</horizontalMargin>
+            <horizontalAlignment>left</horizontalAlignment>
+            <zIndex>50</zIndex>
+        </textlist>
+
+        <!-- right: media panel -->
+        <image name="mediaPanel">
+            <path>./art/solid.png</path>
+            <pos>0.53 0.16</pos>
+            <size>0.44 0.66</size>
+            <color>060E09CD</color>
+            <zIndex>10</zIndex>
+        </image>
+        <image name="mediaEdge">
+            <path>./art/solid.png</path>
+            <pos>0.53 0.16</pos>
+            <size>0.44 0.005</size>
+            <color>${accent}</color>
+            <zIndex>11</zIndex>
+        </image>
+
+        <!-- picture first, then the game video plays over it after a short delay -->
+        <video name="gameVideo">
+            <imageType>screenshot, titlescreen, cover</imageType>
+            <pos>0.75 0.35</pos>
+            <origin>0.5 0.5</origin>
+            <maxSize>0.40 0.32</maxSize>
+            <delay>1.5</delay>
+            <scrollFadeIn>true</scrollFadeIn>
+            <zIndex>30</zIndex>
+        </video>
+
+        <rating name="gameRating">
+            <pos>0.55 0.565</pos>
+            <origin>0 0.5</origin>
+            <size>0.14 0.03</size>
+            <color>FFFFFF</color>
+            <zIndex>40</zIndex>
+        </rating>
+        <datetime name="gameReleaseDate">
+            <metadata>releasedate</metadata>
+            <pos>0.96 0.565</pos>
+            <origin>1 0.5</origin>
+            <size>0.2 0.035</size>
+            <fontPath>${fontMain}</fontPath>
+            <fontSize>0.024</fontSize>
+            <color>B8D8B0</color>
+            <horizontalAlignment>right</horizontalAlignment>
+            <zIndex>40</zIndex>
+        </datetime>
+
+        <text name="gameDescription">
+            <metadata>description</metadata>
+            <pos>0.55 0.61</pos>
+            <size>0.40 0.20</size>
+            <fontPath>${fontMain}</fontPath>
+            <fontSize>0.024</fontSize>
+            <lineSpacing>1.2</lineSpacing>
+            <color>E4F2DF</color>
+            <horizontalAlignment>left</horizontalAlignment>
+            <zIndex>40</zIndex>
+        </text>
+    </view>
+</theme>

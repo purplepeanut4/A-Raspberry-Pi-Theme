@@ -1,0 +1,10 @@
+RASPBERRY CIRCUIT - theme pack
+==============================
+Two folders, because Batocera and ES-DE use different theme engines
+and can't share one theme.xml:
+
+  rpi-berry-theme/          -> Batocera   (copy to /userdata/themes/)
+  rpi-berry-theme-es-de/    -> ES-DE      (copy to ~/ES-DE/themes/)
+
+Both use the same artwork and look the same. The background is drawn with code (no AI art); the logo is the official Raspberry Pi logo.
+See the README.txt inside each folder.
