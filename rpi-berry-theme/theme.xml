@@ -41,15 +41,6 @@
       <pos>0 0</pos>
       <size>1 0.12</size>
       <zIndex>10</zIndex>
-      <storyboard>
-        <animation property="y" from="-0.12" to="0" duration="450" mode="EaseOutCubic"/>
-      </storyboard>
-    </image>
-    <image name="header_line" extra="true">
-      <path>./art/accent.png</path>
-      <pos>0 0.12</pos>
-      <size>1 0.006</size>
-      <zIndex>11</zIndex>
     </image>
     <image name="berry" extra="true">
       <path>./art/berry.png</path>
@@ -62,35 +53,6 @@
         <animation property="rotation" from="-4" to="4" duration="1800" autoReverse="true" repeat="forever" mode="EaseInOut"/>
       </storyboard>
     </image>
-    <!-- Board LEDs: PWR stays lit, ACT blinks -->
-    <image name="led_pwr" extra="true">
-      <path>./art/led_red.png</path>
-      <pos>0.095 0.06</pos>
-      <origin>0 0.5</origin>
-      <maxSize>0.03 0.06</maxSize>
-      <zIndex>12</zIndex>
-    </image>
-    <image name="led_act" extra="true">
-      <path>./art/led_green.png</path>
-      <pos>0.125 0.06</pos>
-      <origin>0 0.5</origin>
-      <maxSize>0.03 0.06</maxSize>
-      <zIndex>12</zIndex>
-      <storyboard>
-        <animation property="opacity" from="1" to="0.08" begin="0" duration="90" autoReverse="true" repeat="forever" mode="Linear"/>
-      </storyboard>
-    </image>
-    <text name="title" extra="true">
-      <text>BERRY BOX</text>
-      <pos>0.17 0.06</pos>
-      <origin>0 0.5</origin>
-      <size>0.5 0.08</size>
-      <fontPath>./art/fonts/DejaVuSansMono-Bold.ttf</fontPath>
-      <fontSize>0.05</fontSize>
-      <color>FFFFFF</color>
-      <alignment>left</alignment>
-      <zIndex>12</zIndex>
-    </text>
 
     <!-- Dark strip behind the carousel so it stays readable over the photo -->
     <image name="carousel_band" extra="true">
@@ -100,23 +62,31 @@
       <size>1 0.32</size>
       <zIndex>30</zIndex>
     </image>
-    <image name="carousel_line_top" extra="true">
-      <path>./art/accent.png</path>
-      <pos>0 0.42</pos>
-      <size>1 0.003</size>
-      <zIndex>31</zIndex>
-    </image>
-    <image name="carousel_line_bottom" extra="true">
-      <path>./art/accent_green.png</path>
-      <pos>0 0.737</pos>
-      <size>1 0.003</size>
-      <zIndex>31</zIndex>
-    </image>
 
     <!-- Console picture for each system (art/systems/<system>.png) -->
     <image name="logo">
       <path>./art/systems/${system.theme}.png</path>
     </image>
+
+        <!-- RetroAchievements: trophy + your username (shown when you are logged in) -->
+    <image name="ra_trophy" extra="true" if="${global.cheevos}">
+      <path>./art/trophy.png</path>
+      <pos>0.97 0.06</pos>
+      <origin>1 0.5</origin>
+      <maxSize>0.05 0.08</maxSize>
+      <zIndex>12</zIndex>
+    </image>
+    <text name="ra_user" extra="true" if="${global.cheevos}">
+      <text>${cheevos.username}</text>
+      <pos>0.915 0.06</pos>
+      <origin>1 0.5</origin>
+      <size>0.25 0.06</size>
+      <fontPath>./art/fonts/DejaVuSans.ttf</fontPath>
+      <fontSize>0.03</fontSize>
+      <color>E8B923</color>
+      <alignment>right</alignment>
+      <zIndex>12</zIndex>
+    </text>
 
     <!-- The row of systems you scroll through -->
     <carousel name="systemcarousel">
@@ -137,10 +107,6 @@
       <fontSize>0.07</fontSize>
       <color>FFFFFF</color>
       <alignment>center</alignment>
-      <storyboard event="activate">
-        <animation property="scale" from="0.85" to="1" duration="300" mode="EaseOutCubic"/>
-        <animation property="opacity" from="0.4" to="1" duration="300" mode="Linear"/>
-      </storyboard>
     </text>
 
     <!-- "123 games available" line -->
@@ -150,9 +116,6 @@
       <origin>0.5 0.5</origin>
       <size>0.42 0.07</size>
       <zIndex>40</zIndex>
-      <storyboard>
-        <animation property="opacity" from="0" to="1" begin="300" duration="500" mode="Linear"/>
-      </storyboard>
     </image>
     <text name="systemInfo">
       <pos>0.5 0.885</pos>
@@ -202,12 +165,6 @@
         <animation property="y" from="-0.12" to="0" duration="450" mode="EaseOutCubic"/>
       </storyboard>
     </image>
-    <image name="header_line" extra="true">
-      <path>./art/accent.png</path>
-      <pos>0 0.12</pos>
-      <size>1 0.006</size>
-      <zIndex>11</zIndex>
-    </image>
     <image name="berry" extra="true">
       <path>./art/berry.png</path>
       <pos>0.053 0.06</pos>
@@ -219,35 +176,17 @@
         <animation property="rotation" from="-4" to="4" duration="1800" autoReverse="true" repeat="forever" mode="EaseInOut"/>
       </storyboard>
     </image>
-    <!-- Board LEDs: PWR stays lit, ACT blinks -->
-    <image name="led_pwr" extra="true">
-      <path>./art/led_red.png</path>
-      <pos>0.095 0.06</pos>
-      <origin>0 0.5</origin>
-      <maxSize>0.03 0.06</maxSize>
-      <zIndex>12</zIndex>
-    </image>
-    <image name="led_act" extra="true">
-      <path>./art/led_green.png</path>
-      <pos>0.125 0.06</pos>
-      <origin>0 0.5</origin>
-      <maxSize>0.03 0.06</maxSize>
-      <zIndex>12</zIndex>
-      <storyboard>
-        <animation property="opacity" from="1" to="0.08" begin="0" duration="90" autoReverse="true" repeat="forever" mode="Linear"/>
-      </storyboard>
-    </image>
 
     <!-- System logo (or name) in the header -->
     <image name="logo">
       <path>./art/systems/${system.theme}.png</path>
-      <pos>0.17 0.06</pos>
+      <pos>0.095 0.06</pos>
       <origin>0 0.5</origin>
       <maxSize>0.07 0.1</maxSize>
       <zIndex>12</zIndex>
     </image>
     <text name="md_systemname" extra="true">
-      <pos>0.25 0.06</pos>
+      <pos>0.18 0.06</pos>
       <origin>0 0.5</origin>
       <size>0.5 0.08</size>
       <fontPath>./art/fonts/DejaVuSansMono-Bold.ttf</fontPath>
@@ -256,6 +195,15 @@
       <alignment>left</alignment>
       <zIndex>12</zIndex>
     </text>
+
+        <!-- RetroAchievements: trophy shows when this system supports achievements -->
+    <image name="ra_trophy" extra="true" if="${system.cheevos}">
+      <path>./art/trophy.png</path>
+      <pos>0.97 0.06</pos>
+      <origin>1 0.5</origin>
+      <maxSize>0.05 0.08</maxSize>
+      <zIndex>12</zIndex>
+    </image>
 
     <!-- Left panel behind the game list -->
     <image name="list_panel" extra="true">
@@ -267,12 +215,6 @@
         <animation property="x" from="-0.5" to="0.03" begin="150" duration="500" mode="EaseOutCubic"/>
         <animation property="opacity" from="0" to="1" begin="150" duration="500" mode="Linear"/>
       </storyboard>
-    </image>
-    <image name="list_edge" extra="true">
-      <path>./art/accent_green.png</path>
-      <pos>0.03 0.16</pos>
-      <size>0.004 0.66</size>
-      <zIndex>11</zIndex>
     </image>
 
     <textlist name="gamelist">
@@ -301,12 +243,6 @@
         <animation property="x" from="1" to="0.53" begin="250" duration="500" mode="EaseOutCubic"/>
         <animation property="opacity" from="0" to="1" begin="250" duration="500" mode="Linear"/>
       </storyboard>
-    </image>
-    <image name="media_edge" extra="true">
-      <path>./art/accent.png</path>
-      <pos>0.53 0.16</pos>
-      <size>0.44 0.005</size>
-      <zIndex>11</zIndex>
     </image>
 
     <image name="md_image">
@@ -390,12 +326,6 @@
         <animation property="y" from="-0.12" to="0" duration="450" mode="EaseOutCubic"/>
       </storyboard>
     </image>
-    <image name="header_line" extra="true">
-      <path>./art/accent.png</path>
-      <pos>0 0.12</pos>
-      <size>1 0.006</size>
-      <zIndex>11</zIndex>
-    </image>
     <image name="berry" extra="true">
       <path>./art/berry.png</path>
       <pos>0.053 0.06</pos>
@@ -405,24 +335,6 @@
       <storyboard>
         <animation property="scale" from="1" to="1.1" duration="900" autoReverse="true" repeat="forever" mode="EaseInOut"/>
         <animation property="rotation" from="-4" to="4" duration="1800" autoReverse="true" repeat="forever" mode="EaseInOut"/>
-      </storyboard>
-    </image>
-    <!-- Board LEDs: PWR stays lit, ACT blinks -->
-    <image name="led_pwr" extra="true">
-      <path>./art/led_red.png</path>
-      <pos>0.095 0.06</pos>
-      <origin>0 0.5</origin>
-      <maxSize>0.03 0.06</maxSize>
-      <zIndex>12</zIndex>
-    </image>
-    <image name="led_act" extra="true">
-      <path>./art/led_green.png</path>
-      <pos>0.125 0.06</pos>
-      <origin>0 0.5</origin>
-      <maxSize>0.03 0.06</maxSize>
-      <zIndex>12</zIndex>
-      <storyboard>
-        <animation property="opacity" from="1" to="0.08" begin="0" duration="90" autoReverse="true" repeat="forever" mode="Linear"/>
       </storyboard>
     </image>
     <gamegrid name="gamegrid">
@@ -444,8 +356,11 @@
 
   <!-- ===================== MENUS ===================== -->
   <view name="menu">
+    <menuIcons name="menuicons">
+      <iconRetroachievements>./art/trophy.png</iconRetroachievements>
+    </menuIcons>
     <menuBackground name="menubg">
-      <color>0B1A10</color>
+      <color>000000</color>
     </menuBackground>
     <menuText name="menutext">
       <fontPath>./art/fonts/DejaVuSans.ttf</fontPath>

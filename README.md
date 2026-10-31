@@ -4,18 +4,20 @@ A Raspberry Pi themed Batocera/ES theme
 
 ![Preview of the animated background](docs/preview.jpg)
 
-**Raspberry Circuit** is an animated EmulationStation theme in Raspberry Pi colours (raspberry red and leaf green). It comes in two versions, because Batocera and ES-DE use different theme engines and can't share one `theme.xml`.
+**Raspberry Circuit** is a simple, animated EmulationStation theme in Raspberry Pi colours (raspberry red and leaf green). It comes in two versions, because Batocera and ES-DE use different theme engines and can't share one `theme.xml`.
 
 > **Status:** I haven't been able to test this on a real device yet. The XML is valid and the layouts follow the official theme docs, but expect small fixes. Issues and error logs are welcome.
 
 ## Features
 
-- **Animated background.** A 10-second seamless loop built from a photo of Raspberry Pi boards. Each board floats on its own over an animated circuit layer, with travelling light pulses, soft edge glows and a light sweep.
+- **Animated background.** A 30-second seamless loop built from a photo of Raspberry Pi boards. Each board floats on its own over pure black, with soft coloured edge glows and light sweeps.
 - **Console pictures** for about 200 systems, shown in the system carousel and in each game list header.
-- **Bobbing Raspberry Pi logo** and blinking PWR/ACT LEDs in the header.
-- **Batocera:** storyboard animations. The header slides in, the panels slide and fade in, game images fade in, and the selected system pops.
+- **Raspberry Pi logo** in the header (pulsing in Batocera, bobbing in ES-DE).
+- **RetroAchievements (Batocera only).** A gold trophy and your username in the main screen header when you're logged in, a trophy in the game list header for systems that support achievements, and a trophy icon in the menu.
+- **Batocera:** the panels and game images fade in.
 - **ES-DE:** fade transitions between screens, and a choice of raspberry or leaf-green accent colours.
 - Game list with description, rating, release date and screenshot/video preview, plus a simple grid view (Batocera) and themed menus.
+- Help prompts sit on their own row at the bottom, so nothing overlaps.
 
 ## What's in this repo
 
@@ -47,28 +49,33 @@ ES-DE is strict about theme files: one wrong tag stops the theme loading. The er
 2. On the console: **START → User Interface → Theme Set → rpi-berry-theme**.
 3. If something looks wrong, check `/userdata/system/logs/es_launch_stdout.log`.
 
+## RetroAchievements
+
+Only the Batocera version has this. ES-DE has no RetroAchievements feature of its own (achievements are handled inside RetroArch), so there's nothing for an ES-DE theme to show.
+
+In Batocera, log in under **START → Game Settings → RetroAchievements**. The theme then shows your username next to a trophy on the main screen. It uses Batocera's theme conditions `if="${global.cheevos}"` (logged in) and `if="${system.cheevos}"` (this system supports achievements). I couldn't test these on a device, so if the trophy doesn't appear, open an issue with your Batocera version.
+
 ## Customising
 
 `theme.xml` is commented and written for beginners. `pos` and `size` are fractions of the screen, and colours are 6-digit hex without the `#`.
 
-- **Title:** search `theme.xml` for `BERRY BOX`.
 - **Console picture:** drop a PNG named exactly like the system into `art/systems/` (for example `snes.png`). A system with no picture shows its name as text.
 - **Animation speed (Batocera):** change the `duration="..."` values, which are in milliseconds.
-- **Colours:** raspberry is `C51A4A` and leaf green is `75A928`.
+- **Colours:** raspberry is `C51A4A`, leaf green is `75A928` and the trophy gold is `E8B923`.
 - **Check for overlaps after editing:** run `python3 tools/check_layout.py rpi-berry-theme/theme.xml rpi-berry-theme-es-de/theme.xml`. It lists any two on-screen elements whose boxes overlap (panels behind text are ignored).
-- **Move the carousel:** change the `y` values of the carousel, `carousel_band` / `carouselBand` and the two lines.
+- **Move the carousel:** change the `y` values of the carousel, `carousel_band` / `carouselBand` and the "games available" pill.
 
 ## Performance
 
-The background is a 720p H.264 video, which is fine on a Pi 4/5 and PCs. On a Pi 3 or older it may stutter. If so, delete the `<video name="bg_video">` blocks (Batocera) or the `<video name="backgroundVideo">` block (ES-DE) from `theme.xml`. The still image `art/background.jpg` is used instead.
+The background is a 720p H.264 video (about 6 MB), which is fine on a Pi 4/5 and PCs. On a Pi 3 or older it may stutter. If so, delete the `<video name="bg_video">` blocks (Batocera) or the `<video name="backgroundVideo">` block (ES-DE) from `theme.xml`. The still image `art/background.jpg` is used instead.
 
 ## Credits and licences
 
 - **Console pictures:** [ES-DE-System-Icon-Set](https://github.com/Zoidburg13/ES-DE-System-Icon-Set) by Zoidburg13, released under CC0.
 - **Fonts:** DejaVu Sans and DejaVu Sans Mono (free licence).
-- **Circuit animation:** drawn with code, with no AI-generated art.
+- **Trophy icon and background animation:** made with code, with no AI-generated art.
 - **Raspberry Pi logo:** a trademark of Raspberry Pi Ltd. Used here for a personal, fan-made theme. Check their brand guidelines before redistributing.
 - **Console logos** shown in the icon set belong to their respective owners.
 - **Background photo:** supplied by the repo owner. Its original source and licence are not recorded here, so replace it if you plan to redistribute the theme widely.
 
-This project isn't affiliated with or endorsed by Raspberry Pi Ltd, Batocera or ES-DE.
+This project isn't affiliated with or endorsed by Raspberry Pi Ltd, Batocera, RetroAchievements or ES-DE.
