@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- pokemini: animated pico2 background (used by the "Animated everywhere" theme variant) -->
+<theme>
+    <view name="gamelist">
+        <video name="productVideo">
+            <path>./art/products/pico2.mp4</path>
+            <pos>0 0</pos>
+            <size>1 1</size>
+            <audio>false</audio>
+            <stationary>always</stationary>
+            <zIndex>3</zIndex>
+        </video>
+    </view>
+</theme>

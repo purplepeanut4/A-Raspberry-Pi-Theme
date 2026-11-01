@@ -26,7 +26,7 @@
       <zIndex>0</zIndex>
     </image>
 
-    <!-- THE ANIMATION: looping circuit-board video -->
+    <!-- THE ANIMATION: looping video (main screen only, so it never competes with game videos) -->
     <video name="bg_video" extra="true">
       <path>./art/background.mp4</path>
       <pos>0 0</pos>
@@ -148,13 +148,20 @@
       <size>1 1</size>
       <zIndex>0</zIndex>
     </image>
-    <video name="bg_video" extra="true">
-      <path>./art/background.mp4</path>
-      <pos>0 0</pos>
+
+    <!-- A different Raspberry Pi product behind each console (art/bg/<system>.jpg),
+         drifting slowly. Cheap: it is a picture, not a video. -->
+    <image name="bg_product" extra="true">
+      <path>./art/bg/${system.theme}.jpg</path>
+      <pos>0.5 0.5</pos>
+      <origin>0.5 0.5</origin>
       <size>1 1</size>
-      <delay>0</delay>
-      <zIndex>1</zIndex>
-    </video>
+      <zIndex>2</zIndex>
+      <storyboard>
+        <animation property="scale" from="1" to="1.05" duration="9000" autoReverse="true" repeat="forever" mode="EaseInOut"/>
+        <animation property="y" from="0.5" to="0.485" duration="7000" autoReverse="true" repeat="forever" mode="EaseInOut"/>
+      </storyboard>
+    </image>
 
     <image name="header_bar" extra="true">
       <path>./art/panel.png</path>
@@ -208,6 +215,7 @@
     <!-- Left panel behind the game list -->
     <image name="list_panel" extra="true">
       <path>./art/panel.png</path>
+      <color>FFFFFF9A</color>
       <pos>0.03 0.16</pos>
       <size>0.47 0.66</size>
       <zIndex>10</zIndex>
@@ -236,6 +244,7 @@
     <!-- Right side: picture/video + description -->
     <image name="media_panel" extra="true">
       <path>./art/panel.png</path>
+      <color>FFFFFF9A</color>
       <pos>0.53 0.16</pos>
       <size>0.44 0.66</size>
       <zIndex>10</zIndex>
@@ -310,13 +319,20 @@
       <size>1 1</size>
       <zIndex>0</zIndex>
     </image>
-    <video name="bg_video" extra="true">
-      <path>./art/background.mp4</path>
-      <pos>0 0</pos>
+
+    <!-- A different Raspberry Pi product behind each console (art/bg/<system>.jpg),
+         drifting slowly. Cheap: it is a picture, not a video. -->
+    <image name="bg_product" extra="true">
+      <path>./art/bg/${system.theme}.jpg</path>
+      <pos>0.5 0.5</pos>
+      <origin>0.5 0.5</origin>
       <size>1 1</size>
-      <delay>0</delay>
-      <zIndex>1</zIndex>
-    </video>
+      <zIndex>2</zIndex>
+      <storyboard>
+        <animation property="scale" from="1" to="1.05" duration="9000" autoReverse="true" repeat="forever" mode="EaseInOut"/>
+        <animation property="y" from="0.5" to="0.485" duration="7000" autoReverse="true" repeat="forever" mode="EaseInOut"/>
+      </storyboard>
+    </image>
     <image name="header_bar" extra="true">
       <path>./art/panel.png</path>
       <pos>0 0</pos>

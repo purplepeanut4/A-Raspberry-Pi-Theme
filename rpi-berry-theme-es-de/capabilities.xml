@@ -13,6 +13,20 @@
         <label>Leaf green</label>
     </colorScheme>
 
+    <!-- Background: UI Settings > Theme variant.  If it lags, pick "Still background". -->
+    <variant name="animated">
+        <label>Animated main screen, product photo per console</label>
+        <selectable>true</selectable>
+    </variant>
+    <variant name="animatedAll">
+        <label>Animated everywhere, product video per console (heavier)</label>
+        <selectable>true</selectable>
+    </variant>
+    <variant name="still">
+        <label>Still backgrounds (fastest)</label>
+        <selectable>true</selectable>
+    </variant>
+
     <!-- Animated screen changes: UI Settings > Theme transitions -->
     <transitions name="berryFade">
         <label>berry fade</label>

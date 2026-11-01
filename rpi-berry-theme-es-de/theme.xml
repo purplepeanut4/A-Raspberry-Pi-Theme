@@ -46,16 +46,6 @@
             <zIndex>0</zIndex>
         </image>
 
-        <!-- ANIMATION 1: looping circuit-board video -->
-        <video name="backgroundVideo">
-            <path>./art/background.mp4</path>
-            <pos>0 0</pos>
-            <size>1 1</size>
-            <audio>false</audio>
-            <stationary>always</stationary>
-            <zIndex>1</zIndex>
-        </video>
-
         <!-- header bar -->
         <image name="headerBar">
             <path>./art/solid.png</path>
@@ -87,6 +77,26 @@
             <fontSize>0.022</fontSize>
         </helpsystem>
     </view>
+
+    <!-- ANIMATED BACKGROUND.  Choose in UI Settings > Theme variant:
+         animated    = video on the main screen only (default, light)
+         animatedAll = animated product video behind each console's game list (heavier)
+         still       = no video at all (fastest) -->
+    <variant name="animated, animatedAll">
+        <view name="system">
+            <video name="backgroundVideo">
+                <path>./art/background.mp4</path>
+                <pos>0 0</pos>
+                <size>1 1</size>
+                <audio>false</audio>
+                <stationary>always</stationary>
+                <zIndex>1</zIndex>
+            </video>
+        </view>
+    </variant>
+    <variant name="animatedAll">
+        <include>./bgv/${system.theme}.xml</include>
+    </variant>
 
     <!-- ===================== SYSTEM (main) SCREEN ===================== -->
     <view name="system">
@@ -126,7 +136,7 @@
             <pos>0.5 0.885</pos>
             <origin>0.5 0.5</origin>
             <size>0.30 0.07</size>
-            <color>000000CD</color>
+            <color>0000008C</color>
             <zIndex>40</zIndex>
         </image>
         <text name="gameCount">
@@ -145,6 +155,15 @@
 
     <!-- ===================== GAME LIST SCREEN ===================== -->
     <view name="gamelist">
+
+        <!-- A different Raspberry Pi product behind each console (art/bg/<system>.jpg) -->
+        <image name="productStill">
+            <path>./art/bg/${system.theme}.jpg</path>
+            <pos>0 0</pos>
+            <size>1 1</size>
+            <stationary>always</stationary>
+            <zIndex>2</zIndex>
+        </image>
 
         <!-- system name in the header -->
         <!-- picture of the console (art/systems/<system>.png) -->
@@ -173,7 +192,7 @@
             <path>./art/solid.png</path>
             <pos>0.03 0.16</pos>
             <size>0.47 0.66</size>
-            <color>000000CD</color>
+            <color>0000008C</color>
             <zIndex>10</zIndex>
         </image>
 
@@ -198,7 +217,7 @@
             <path>./art/solid.png</path>
             <pos>0.53 0.16</pos>
             <size>0.44 0.66</size>
-            <color>000000CD</color>
+            <color>0000008C</color>
             <zIndex>10</zIndex>
         </image>
 

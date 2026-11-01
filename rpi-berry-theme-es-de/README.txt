@@ -16,7 +16,21 @@ TEST IT WITH DEBUG OUTPUT (AppImage):
 WHAT YOU GET
  - 30 second looping background: Raspberry Pi boards floating on pure black
  - Console picture for about 200 systems (art/systems/<system>.png)
+ - Game lists: a different Raspberry Pi product behind each console
  - Bobbing Raspberry Pi logo, fade transitions between screens
+
+A DIFFERENT RASPBERRY PI PER CONSOLE
+ Open a console and the game list background is a real Raspberry Pi product:
+ Pi 400/500/500+ (retro computers), Pico/Zero boards (handhelds), and Pi 5,
+ Pi 4, Compute Module 4/5 and CM5 IO board (everything else).
+ The picture is art/bg/<system>.jpg. To change a console's Pi, replace that
+ file with any other file from art/bg/. Photos: Raspberry Pi documentation
+ (CC BY-SA 4.0), cut out and composited for this theme.
+
+THEME VARIANT (Menu > UI Settings > Theme variant)
+ Animated main screen, product photo per console  (default, light)
+ Animated everywhere, product video per console   (heavier)
+ Still backgrounds                                 (fastest - pick this if it lags)
 
 RETROACHIEVEMENTS
  ES-DE has no RetroAchievements feature (it is handled inside RetroArch),

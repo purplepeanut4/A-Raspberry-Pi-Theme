@@ -9,12 +9,13 @@ A Raspberry Pi themed Batocera/ES theme
 
 ## Features
 
-- Animated background: a 30 second seamless loop made from a photo of Raspberry Pi boards. Each board floats on its own over pure black with soft coloured edge glows and light sweeps.
+- Animated home screen: a 30 second seamless loop made from a photo of Raspberry Pi boards. Each board floats on its own over pure black with soft coloured edge glows and light sweeps.
+- A different Raspberry Pi for every console. Open a console and the game list background is a real Raspberry Pi product photo: Pi 400, 500 and 500+ (retro computers), Pico 2, Pico W, Zero and Zero 2 W (handhelds), and Pi 5, Pi 4, Compute Module 4, Compute Module 5 and the CM5 IO Board (everything else). The full list is in [docs/console-products.json](docs/console-products.json).
 - Console pictures for around 200 systems, displayed in the system carousel and in the header of each game list.
 - Raspberry Pi logo in the header (pulsing in Batocera, bobbing in ES-DE)
 - RetroAchievements (only for Batocera). A gold trophy and your username in the main screen header when you're logged in, a trophy in the game list header for systems that support achievements and a trophy icon in the menu.
-- Batocera: the panels and game images fade in.
-- ES-DE: fade transitions between screens, with a choice of raspberry or leaf green as the accent colour.
+- Batocera: the panels and game images fade in, and each console's product photo drifts slowly (a cheap image animation, not a video).
+- ES-DE: fade transitions between screens, a choice of raspberry or leaf green as the accent colour, and a Theme variant setting: animated main screen with product photos (default), animated everywhere with a looping product video per console, or still backgrounds only.
 - Game list with description, rating, release date and screenshot/video preview, plus a simple grid view (Batocera) and themed menus.
 - The help prompts sit on their own row at the bottom so nothing overlaps.
 
@@ -32,7 +33,7 @@ Both use the same artwork. Each folder has its own README.txt.
 ### ES-DE
 1. Copy rpi-berry-theme-es-de into ~/ES-DE/themes/ (for older versions: ~/.emulationstation/themes/)
 2. Restart ES-DE and then go to Menu → UI Settings → Theme set → Raspberry Circuit.
-3. Optional: pick a colour scheme (raspberry / leaf) and theme transitions all from the same menu.
+3. Optional: pick a colour scheme (raspberry / leaf), theme transitions and a theme variant all from the same menu. If it lags, choose the variant "Still backgrounds (fastest)".
 
 To preview from an AppImage with error output:
 
@@ -62,11 +63,17 @@ theme.xml is commented and written for the beginner. pos and size are screen fra
 - Animation speed (Batocera): change the `duration="..."` values (these are in milliseconds).
 - Colours: Raspberry is C51A4A, leaf green is 75A928 and the trophy gold is E8B923.
 - Check for overlaps after editing: run `python3 tools/check_layout.py rpi-berry-theme/theme.xml rpi-berry-theme-es-de/theme.xml`. This will list any two on screen elements whose boxes overlap (panels behind text are ignored).
+- Change which Pi a console gets: replace art/bg/<system>.jpg with another file from art/bg/ (in ES-DE the matching video is named in bgv/<system>.xml).
 - Move the carousel: change the y values of the carousel, carousel_band/carouselBand and the 'games available' pill.
 
 ## Performance
 
-The background is a 720p H.264 video (approx 6MB) which is quite fine on a Pi 4/5 and PCs. It may stutter on a Pi 3 or older. If it does then simply delete the <video name="bg_video"> blocks (Batocera) or the <video name="backgroundVideo"> block (ES-DE) from theme.xml. The still image art/background.jpg is then used in that case.
+If it lags:
+
+- ES-DE: go to Menu → UI Settings → Theme variant and choose "Still backgrounds (fastest)". The default only plays one video (on the main screen) and the game lists use pictures so they never compete with game preview videos. "Animated everywhere" is the heaviest.
+- Batocera: delete the <video name="bg_video"> block from theme.xml (it's on the main screen only). The still image art/background.jpg is then used instead.
+
+The main screen video is 960x540 and about 3.5MB, encoded to be cheap to decode. The per-product loops are 10 seconds and 200 to 400KB each.
 
 ## Credits and licences
 
@@ -75,6 +82,7 @@ The background is a 720p H.264 video (approx 6MB) which is quite fine on a Pi 4/
 - Trophy icon and background animation: made with code, not AI generated art.
 - Raspberry Pi logo: a trademark of Raspberry Pi Ltd. Used here for a personal/fan-made theme. Please check their brand guidelines before redistributing.
 - All console logos in the icon set are the property of their respective owners.
-- Background photo: supplied by the repo owner. Original source and licence are not recorded here so please replace with your own if you intend to distribute the theme widely.
+- Raspberry Pi product photos (Pi 400, 500, 500+, 5, 4 B, Zero, Zero 2 W, Pico 2, Pico W, Compute Module 4 and 5, CM5 IO Board): from the [Raspberry Pi documentation](https://github.com/raspberrypi/documentation), licensed [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) by Raspberry Pi Ltd. They have been cut out, dimmed, given a glow and animated for this theme. The files in art/bg and art/products are adaptations and are shared under the same CC BY-SA 4.0 licence.
+- Home screen photo: supplied by the repo owner. Original source and licence are not recorded here so please replace with your own if you intend to distribute the theme widely.
 
 This project has no affiliation or endorsement from Raspberry Pi Ltd, Batocera, RetroAchievements or ES-DE.

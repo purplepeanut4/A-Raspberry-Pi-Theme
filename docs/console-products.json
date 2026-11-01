@@ -1,0 +1,874 @@
+{
+ "3do": {
+  "product": "Compute Module 4",
+  "file": "cm4"
+ },
+ "3ds": {
+  "product": "Raspberry Pi Pico 2",
+  "file": "pico2"
+ },
+ "adam": {
+  "product": "Compute Module 5 IO Board",
+  "file": "cm5io"
+ },
+ "ags": {
+  "product": "Raspberry Pi Zero 2 W",
+  "file": "zero2w"
+ },
+ "amiga": {
+  "product": "Raspberry Pi 400",
+  "file": "pi400"
+ },
+ "amiga1200": {
+  "product": "Raspberry Pi Pico 2",
+  "file": "pico2"
+ },
+ "amiga500": {
+  "product": "Raspberry Pi 500",
+  "file": "pi500"
+ },
+ "amiga600": {
+  "product": "Raspberry Pi Zero",
+  "file": "zero"
+ },
+ "amigacd32": {
+  "product": "Raspberry Pi 500+",
+  "file": "pi500plus"
+ },
+ "amstradcpc": {
+  "product": "Raspberry Pi 400",
+  "file": "pi400"
+ },
+ "android": {
+  "product": "Raspberry Pi Pico W",
+  "file": "picow"
+ },
+ "androidapps": {
+  "product": "Raspberry Pi 5",
+  "file": "pi5"
+ },
+ "androidgames": {
+  "product": "Raspberry Pi 4 Model B",
+  "file": "pi4b"
+ },
+ "apple2": {
+  "product": "Raspberry Pi 500",
+  "file": "pi500"
+ },
+ "apple2gs": {
+  "product": "Raspberry Pi 500+",
+  "file": "pi500plus"
+ },
+ "arcade": {
+  "product": "Compute Module 5 IO Board",
+  "file": "cm5io"
+ },
+ "arcadia": {
+  "product": "Compute Module 5",
+  "file": "cm5"
+ },
+ "archimedes": {
+  "product": "Compute Module 4",
+  "file": "cm4"
+ },
+ "arduboy": {
+  "product": "Compute Module 5 IO Board",
+  "file": "cm5io"
+ },
+ "astrocade": {
+  "product": "Raspberry Pi Zero 2 W",
+  "file": "zero2w"
+ },
+ "atari": {
+  "product": "Raspberry Pi Pico 2",
+  "file": "pico2"
+ },
+ "atari2600": {
+  "product": "Raspberry Pi 5",
+  "file": "pi5"
+ },
+ "atari5200": {
+  "product": "Raspberry Pi Zero",
+  "file": "zero"
+ },
+ "atari7800": {
+  "product": "Raspberry Pi Pico W",
+  "file": "picow"
+ },
+ "atari800": {
+  "product": "Raspberry Pi 400",
+  "file": "pi400"
+ },
+ "atarijaguar": {
+  "product": "Raspberry Pi 5",
+  "file": "pi5"
+ },
+ "atarijaguarcd": {
+  "product": "Raspberry Pi 4 Model B",
+  "file": "pi4b"
+ },
+ "atarilynx": {
+  "product": "Raspberry Pi Pico W",
+  "file": "picow"
+ },
+ "atarist": {
+  "product": "Raspberry Pi 500",
+  "file": "pi500"
+ },
+ "atarixe": {
+  "product": "Compute Module 5",
+  "file": "cm5"
+ },
+ "atomiswave": {
+  "product": "Compute Module 4",
+  "file": "cm4"
+ },
+ "bbc": {
+  "product": "Raspberry Pi 500+",
+  "file": "pi500plus"
+ },
+ "bbcmicro": {
+  "product": "Raspberry Pi 400",
+  "file": "pi400"
+ },
+ "c64": {
+  "product": "Raspberry Pi 500",
+  "file": "pi500"
+ },
+ "cave": {
+  "product": "Compute Module 5 IO Board",
+  "file": "cm5io"
+ },
+ "cdi": {
+  "product": "Raspberry Pi Zero 2 W",
+  "file": "zero2w"
+ },
+ "cdimono1": {
+  "product": "Raspberry Pi Pico 2",
+  "file": "pico2"
+ },
+ "cdtv": {
+  "product": "Raspberry Pi Zero",
+  "file": "zero"
+ },
+ "chailove": {
+  "product": "Raspberry Pi Pico W",
+  "file": "picow"
+ },
+ "channelf": {
+  "product": "Raspberry Pi 5",
+  "file": "pi5"
+ },
+ "coco": {
+  "product": "Raspberry Pi 500+",
+  "file": "pi500plus"
+ },
+ "colecovision": {
+  "product": "Raspberry Pi 4 Model B",
+  "file": "pi4b"
+ },
+ "consolearcade": {
+  "product": "Compute Module 5",
+  "file": "cm5"
+ },
+ "cps": {
+  "product": "Compute Module 4",
+  "file": "cm4"
+ },
+ "cps1": {
+  "product": "Compute Module 5 IO Board",
+  "file": "cm5io"
+ },
+ "cps2": {
+  "product": "Raspberry Pi Zero 2 W",
+  "file": "zero2w"
+ },
+ "cps3": {
+  "product": "Raspberry Pi Pico 2",
+  "file": "pico2"
+ },
+ "crvision": {
+  "product": "Raspberry Pi Zero",
+  "file": "zero"
+ },
+ "daphne": {
+  "product": "Raspberry Pi Pico W",
+  "file": "picow"
+ },
+ "desktop": {
+  "product": "Raspberry Pi 5",
+  "file": "pi5"
+ },
+ "doom": {
+  "product": "Raspberry Pi 4 Model B",
+  "file": "pi4b"
+ },
+ "dos": {
+  "product": "Raspberry Pi 400",
+  "file": "pi400"
+ },
+ "dragon32": {
+  "product": "Raspberry Pi 500",
+  "file": "pi500"
+ },
+ "dreamcast": {
+  "product": "Compute Module 5",
+  "file": "cm5"
+ },
+ "easyrpg": {
+  "product": "Compute Module 5",
+  "file": "cm5"
+ },
+ "electron": {
+  "product": "Compute Module 4",
+  "file": "cm4"
+ },
+ "emulators": {
+  "product": "Compute Module 5 IO Board",
+  "file": "cm5io"
+ },
+ "epic": {
+  "product": "Raspberry Pi Zero 2 W",
+  "file": "zero2w"
+ },
+ "famicom": {
+  "product": "Raspberry Pi Pico 2",
+  "file": "pico2"
+ },
+ "fba": {
+  "product": "Raspberry Pi Zero",
+  "file": "zero"
+ },
+ "fba_libretro": {
+  "product": "Raspberry Pi Pico W",
+  "file": "picow"
+ },
+ "fbneo": {
+  "product": "Raspberry Pi Pico 2",
+  "file": "pico2"
+ },
+ "fds": {
+  "product": "Raspberry Pi 5",
+  "file": "pi5"
+ },
+ "flash": {
+  "product": "Raspberry Pi 4 Model B",
+  "file": "pi4b"
+ },
+ "fm7": {
+  "product": "Raspberry Pi 500+",
+  "file": "pi500plus"
+ },
+ "fmtowns": {
+  "product": "Compute Module 5",
+  "file": "cm5"
+ },
+ "fpinball": {
+  "product": "Compute Module 4",
+  "file": "cm4"
+ },
+ "gamate": {
+  "product": "Compute Module 5 IO Board",
+  "file": "cm5io"
+ },
+ "gameandwatch": {
+  "product": "Raspberry Pi Zero",
+  "file": "zero"
+ },
+ "gamecom": {
+  "product": "Raspberry Pi Zero 2 W",
+  "file": "zero2w"
+ },
+ "gamecube": {
+  "product": "Compute Module 5 IO Board",
+  "file": "cm5io"
+ },
+ "gamegear": {
+  "product": "Raspberry Pi Pico 2",
+  "file": "pico2"
+ },
+ "gb": {
+  "product": "Raspberry Pi Pico W",
+  "file": "picow"
+ },
+ "gba": {
+  "product": "Raspberry Pi Zero",
+  "file": "zero"
+ },
+ "gbc": {
+  "product": "Raspberry Pi Zero 2 W",
+  "file": "zero2w"
+ },
+ "gc": {
+  "product": "Compute Module 4",
+  "file": "cm4"
+ },
+ "genesis": {
+  "product": "Raspberry Pi 5",
+  "file": "pi5"
+ },
+ "gmaster": {
+  "product": "Raspberry Pi Pico 2",
+  "file": "pico2"
+ },
+ "gx4000": {
+  "product": "Raspberry Pi Zero 2 W",
+  "file": "zero2w"
+ },
+ "intellivision": {
+  "product": "Raspberry Pi Pico 2",
+  "file": "pico2"
+ },
+ "j2me": {
+  "product": "Raspberry Pi Zero",
+  "file": "zero"
+ },
+ "jaguar": {
+  "product": "Raspberry Pi Pico W",
+  "file": "picow"
+ },
+ "kodi": {
+  "product": "Raspberry Pi 5",
+  "file": "pi5"
+ },
+ "laserdisc": {
+  "product": "Raspberry Pi 4 Model B",
+  "file": "pi4b"
+ },
+ "lcdgames": {
+  "product": "Compute Module 5",
+  "file": "cm5"
+ },
+ "lowresnx": {
+  "product": "Compute Module 4",
+  "file": "cm4"
+ },
+ "lutris": {
+  "product": "Compute Module 5 IO Board",
+  "file": "cm5io"
+ },
+ "lutro": {
+  "product": "Raspberry Pi Zero 2 W",
+  "file": "zero2w"
+ },
+ "lynx": {
+  "product": "Raspberry Pi Pico W",
+  "file": "picow"
+ },
+ "macintosh": {
+  "product": "Raspberry Pi 400",
+  "file": "pi400"
+ },
+ "mame": {
+  "product": "Raspberry Pi Zero 2 W",
+  "file": "zero2w"
+ },
+ "mame-advmame": {
+  "product": "Raspberry Pi Pico 2",
+  "file": "pico2"
+ },
+ "mame-libretro": {
+  "product": "Raspberry Pi Zero",
+  "file": "zero"
+ },
+ "mame2000": {
+  "product": "Raspberry Pi Pico W",
+  "file": "picow"
+ },
+ "mame2003": {
+  "product": "Raspberry Pi 5",
+  "file": "pi5"
+ },
+ "mame2003plus": {
+  "product": "Raspberry Pi 4 Model B",
+  "file": "pi4b"
+ },
+ "mame2010": {
+  "product": "Compute Module 5",
+  "file": "cm5"
+ },
+ "mame4all": {
+  "product": "Compute Module 4",
+  "file": "cm4"
+ },
+ "mark3": {
+  "product": "Compute Module 5 IO Board",
+  "file": "cm5io"
+ },
+ "mastersystem": {
+  "product": "Raspberry Pi 4 Model B",
+  "file": "pi4b"
+ },
+ "megacd": {
+  "product": "Raspberry Pi Zero 2 W",
+  "file": "zero2w"
+ },
+ "megacdjp": {
+  "product": "Raspberry Pi Pico 2",
+  "file": "pico2"
+ },
+ "megadrive": {
+  "product": "Raspberry Pi Pico W",
+  "file": "picow"
+ },
+ "megadrivejp": {
+  "product": "Raspberry Pi Zero",
+  "file": "zero"
+ },
+ "megaduck": {
+  "product": "Raspberry Pi Zero",
+  "file": "zero"
+ },
+ "mess": {
+  "product": "Raspberry Pi Pico W",
+  "file": "picow"
+ },
+ "model2": {
+  "product": "Raspberry Pi 5",
+  "file": "pi5"
+ },
+ "model3": {
+  "product": "Raspberry Pi 4 Model B",
+  "file": "pi4b"
+ },
+ "moto": {
+  "product": "Compute Module 5",
+  "file": "cm5"
+ },
+ "msx": {
+  "product": "Raspberry Pi 500",
+  "file": "pi500"
+ },
+ "msx1": {
+  "product": "Raspberry Pi 500+",
+  "file": "pi500plus"
+ },
+ "msx2": {
+  "product": "Raspberry Pi 400",
+  "file": "pi400"
+ },
+ "msxturbor": {
+  "product": "Raspberry Pi 500",
+  "file": "pi500"
+ },
+ "mugen": {
+  "product": "Compute Module 4",
+  "file": "cm4"
+ },
+ "multivision": {
+  "product": "Compute Module 5 IO Board",
+  "file": "cm5io"
+ },
+ "n3ds": {
+  "product": "Raspberry Pi Zero 2 W",
+  "file": "zero2w"
+ },
+ "n64": {
+  "product": "Compute Module 5",
+  "file": "cm5"
+ },
+ "n64dd": {
+  "product": "Raspberry Pi Zero 2 W",
+  "file": "zero2w"
+ },
+ "naomi": {
+  "product": "Raspberry Pi Pico 2",
+  "file": "pico2"
+ },
+ "naomi2": {
+  "product": "Raspberry Pi Zero",
+  "file": "zero"
+ },
+ "naomigd": {
+  "product": "Raspberry Pi Pico W",
+  "file": "picow"
+ },
+ "nds": {
+  "product": "Raspberry Pi Pico 2",
+  "file": "pico2"
+ },
+ "ndsi": {
+  "product": "Raspberry Pi 5",
+  "file": "pi5"
+ },
+ "neogeo": {
+  "product": "Raspberry Pi Zero",
+  "file": "zero"
+ },
+ "neogeocd": {
+  "product": "Raspberry Pi 4 Model B",
+  "file": "pi4b"
+ },
+ "neogeocdjp": {
+  "product": "Compute Module 5",
+  "file": "cm5"
+ },
+ "nes": {
+  "product": "Raspberry Pi 5",
+  "file": "pi5"
+ },
+ "ngage": {
+  "product": "Compute Module 4",
+  "file": "cm4"
+ },
+ "ngp": {
+  "product": "Raspberry Pi Pico W",
+  "file": "picow"
+ },
+ "ngpc": {
+  "product": "Raspberry Pi Zero",
+  "file": "zero"
+ },
+ "o2em": {
+  "product": "Compute Module 5 IO Board",
+  "file": "cm5io"
+ },
+ "odyssey2": {
+  "product": "Raspberry Pi Zero 2 W",
+  "file": "zero2w"
+ },
+ "openbor": {
+  "product": "Raspberry Pi Pico 2",
+  "file": "pico2"
+ },
+ "oric": {
+  "product": "Raspberry Pi 500+",
+  "file": "pi500plus"
+ },
+ "palm": {
+  "product": "Raspberry Pi Zero 2 W",
+  "file": "zero2w"
+ },
+ "pc": {
+  "product": "Raspberry Pi 400",
+  "file": "pi400"
+ },
+ "pc88": {
+  "product": "Raspberry Pi 500",
+  "file": "pi500"
+ },
+ "pc98": {
+  "product": "Raspberry Pi 500+",
+  "file": "pi500plus"
+ },
+ "pcarcade": {
+  "product": "Raspberry Pi Zero",
+  "file": "zero"
+ },
+ "pcengine": {
+  "product": "Raspberry Pi Pico W",
+  "file": "picow"
+ },
+ "pcenginecd": {
+  "product": "Raspberry Pi Pico W",
+  "file": "picow"
+ },
+ "pcfx": {
+  "product": "Raspberry Pi 5",
+  "file": "pi5"
+ },
+ "pico8": {
+  "product": "Raspberry Pi 4 Model B",
+  "file": "pi4b"
+ },
+ "plus4": {
+  "product": "Compute Module 5",
+  "file": "cm5"
+ },
+ "pokemini": {
+  "product": "Raspberry Pi Pico 2",
+  "file": "pico2"
+ },
+ "ports": {
+  "product": "Compute Module 4",
+  "file": "cm4"
+ },
+ "ps2": {
+  "product": "Raspberry Pi Zero",
+  "file": "zero"
+ },
+ "ps3": {
+  "product": "Compute Module 5 IO Board",
+  "file": "cm5io"
+ },
+ "ps4": {
+  "product": "Raspberry Pi Zero 2 W",
+  "file": "zero2w"
+ },
+ "psp": {
+  "product": "Raspberry Pi Pico W",
+  "file": "picow"
+ },
+ "psvita": {
+  "product": "Raspberry Pi Zero",
+  "file": "zero"
+ },
+ "psx": {
+  "product": "Raspberry Pi Pico 2",
+  "file": "pico2"
+ },
+ "pv1000": {
+  "product": "Raspberry Pi Pico 2",
+  "file": "pico2"
+ },
+ "quake": {
+  "product": "Raspberry Pi Zero",
+  "file": "zero"
+ },
+ "samcoupe": {
+  "product": "Raspberry Pi 400",
+  "file": "pi400"
+ },
+ "satellaview": {
+  "product": "Raspberry Pi Pico W",
+  "file": "picow"
+ },
+ "saturn": {
+  "product": "Compute Module 4",
+  "file": "cm4"
+ },
+ "saturnjp": {
+  "product": "Raspberry Pi 5",
+  "file": "pi5"
+ },
+ "scummvm": {
+  "product": "Raspberry Pi 500",
+  "file": "pi500"
+ },
+ "scv": {
+  "product": "Raspberry Pi 4 Model B",
+  "file": "pi4b"
+ },
+ "sega32x": {
+  "product": "Compute Module 5",
+  "file": "cm5"
+ },
+ "sega32xjp": {
+  "product": "Compute Module 5",
+  "file": "cm5"
+ },
+ "sega32xna": {
+  "product": "Compute Module 4",
+  "file": "cm4"
+ },
+ "segacd": {
+  "product": "Raspberry Pi 4 Model B",
+  "file": "pi4b"
+ },
+ "sfc": {
+  "product": "Compute Module 5 IO Board",
+  "file": "cm5io"
+ },
+ "sg-1000": {
+  "product": "Raspberry Pi Zero 2 W",
+  "file": "zero2w"
+ },
+ "sg1000": {
+  "product": "Raspberry Pi Pico 2",
+  "file": "pico2"
+ },
+ "sgb": {
+  "product": "Raspberry Pi Zero",
+  "file": "zero"
+ },
+ "snes": {
+  "product": "Raspberry Pi 4 Model B",
+  "file": "pi4b"
+ },
+ "snesna": {
+  "product": "Raspberry Pi Pico W",
+  "file": "picow"
+ },
+ "solarus": {
+  "product": "Raspberry Pi 5",
+  "file": "pi5"
+ },
+ "spectravideo": {
+  "product": "Raspberry Pi 4 Model B",
+  "file": "pi4b"
+ },
+ "steam": {
+  "product": "Compute Module 5",
+  "file": "cm5"
+ },
+ "stratagus": {
+  "product": "Compute Module 4",
+  "file": "cm4"
+ },
+ "stv": {
+  "product": "Compute Module 5 IO Board",
+  "file": "cm5io"
+ },
+ "sufami": {
+  "product": "Raspberry Pi Zero 2 W",
+  "file": "zero2w"
+ },
+ "supergrafx": {
+  "product": "Raspberry Pi Pico 2",
+  "file": "pico2"
+ },
+ "supervision": {
+  "product": "Raspberry Pi Zero 2 W",
+  "file": "zero2w"
+ },
+ "supracan": {
+  "product": "Raspberry Pi Zero",
+  "file": "zero"
+ },
+ "switch": {
+  "product": "Raspberry Pi Pico W",
+  "file": "picow"
+ },
+ "symbian": {
+  "product": "Raspberry Pi 5",
+  "file": "pi5"
+ },
+ "tanodragon": {
+  "product": "Raspberry Pi 4 Model B",
+  "file": "pi4b"
+ },
+ "tg-cd": {
+  "product": "Compute Module 5",
+  "file": "cm5"
+ },
+ "tg16": {
+  "product": "Compute Module 4",
+  "file": "cm4"
+ },
+ "tg16cd": {
+  "product": "Compute Module 5 IO Board",
+  "file": "cm5io"
+ },
+ "ti99": {
+  "product": "Raspberry Pi 500+",
+  "file": "pi500plus"
+ },
+ "tic80": {
+  "product": "Raspberry Pi Zero 2 W",
+  "file": "zero2w"
+ },
+ "to8": {
+  "product": "Raspberry Pi Pico 2",
+  "file": "pico2"
+ },
+ "triforce": {
+  "product": "Raspberry Pi Zero",
+  "file": "zero"
+ },
+ "trs-80": {
+  "product": "Raspberry Pi 400",
+  "file": "pi400"
+ },
+ "type-x": {
+  "product": "Raspberry Pi Pico W",
+  "file": "picow"
+ },
+ "uzebox": {
+  "product": "Raspberry Pi 5",
+  "file": "pi5"
+ },
+ "vectrex": {
+  "product": "Raspberry Pi 4 Model B",
+  "file": "pi4b"
+ },
+ "vic20": {
+  "product": "Raspberry Pi 500",
+  "file": "pi500"
+ },
+ "videopac": {
+  "product": "Compute Module 5",
+  "file": "cm5"
+ },
+ "vircon32": {
+  "product": "Compute Module 4",
+  "file": "cm4"
+ },
+ "virtualboy": {
+  "product": "Raspberry Pi Pico 2",
+  "file": "pico2"
+ },
+ "vpinball": {
+  "product": "Compute Module 5 IO Board",
+  "file": "cm5io"
+ },
+ "vsmile": {
+  "product": "Raspberry Pi Zero 2 W",
+  "file": "zero2w"
+ },
+ "wasm4": {
+  "product": "Raspberry Pi Pico 2",
+  "file": "pico2"
+ },
+ "wii": {
+  "product": "Raspberry Pi Zero 2 W",
+  "file": "zero2w"
+ },
+ "wiiu": {
+  "product": "Raspberry Pi Zero",
+  "file": "zero"
+ },
+ "windows": {
+  "product": "Raspberry Pi 500+",
+  "file": "pi500plus"
+ },
+ "windows3x": {
+  "product": "Raspberry Pi Pico W",
+  "file": "picow"
+ },
+ "windows9x": {
+  "product": "Raspberry Pi 5",
+  "file": "pi5"
+ },
+ "wonderswan": {
+  "product": "Raspberry Pi Pico W",
+  "file": "picow"
+ },
+ "wonderswancolor": {
+  "product": "Raspberry Pi Zero",
+  "file": "zero"
+ },
+ "wswan": {
+  "product": "Raspberry Pi Zero 2 W",
+  "file": "zero2w"
+ },
+ "wswanc": {
+  "product": "Raspberry Pi Pico 2",
+  "file": "pico2"
+ },
+ "x1": {
+  "product": "Raspberry Pi 400",
+  "file": "pi400"
+ },
+ "x68000": {
+  "product": "Raspberry Pi 500",
+  "file": "pi500"
+ },
+ "xbox": {
+  "product": "Raspberry Pi 4 Model B",
+  "file": "pi4b"
+ },
+ "xbox360": {
+  "product": "Compute Module 5",
+  "file": "cm5"
+ },
+ "xboxone": {
+  "product": "Compute Module 4",
+  "file": "cm4"
+ },
+ "zmachine": {
+  "product": "Compute Module 5 IO Board",
+  "file": "cm5io"
+ },
+ "zx81": {
+  "product": "Raspberry Pi 500+",
+  "file": "pi500plus"
+ },
+ "zxnext": {
+  "product": "Raspberry Pi Zero 2 W",
+  "file": "zero2w"
+ },
+ "zxspectrum": {
+  "product": "Raspberry Pi 400",
+  "file": "pi400"
+ }
+}
