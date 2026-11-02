@@ -2,14 +2,14 @@
 
 A Raspberry Pi themed Batocera/ES theme
 
-![Main screen: every Raspberry Pi floating together](docs/preview.jpg)
+![Main screen: the whole screen filled with animated Raspberry Pis](docs/preview.jpg)
 
 **Raspberry Circuit** is a simple animated EmulationStation theme in Raspberry Pi colours (raspberry red and leaf green). It's available in two versions as Batocera and ES-DE use different theme engines and can't share a single theme.xml.
 
 
 ## Features
 
-- Main screen background: all the Raspberry Pis. A 30 second seamless loop with every product floating together on pure black, with soft coloured edge glows and light sweeps. It features the Pi 5, Pi 4, Pi 400, Pi 500, Pi 500+, Compute Module 4, Compute Module 5 (and its IO board), Pico 2, Pico W, Zero and Zero 2 W.
+- Main screen background: all the Raspberry Pis, repeated to fill the whole screen. A 24 second seamless loop where the rows of Pis slide slowly in opposite directions while each one bobs, tilts and glows, with light sweeps passing over them. It features the Pi 5, Pi 4, Pi 400, Pi 500, Pi 500+, Compute Module 4, Compute Module 5 (and its IO board), Pico 2, Pico W, Zero and Zero 2 W.
 - Every console page gets its own Pi. Open a console and its game list sits in front of a different Raspberry Pi product (around 200 systems are covered). In ES-DE these can be animated too.
 - Console pictures for around 200 systems, displayed in the system carousel and in the header of each game list.
 - Raspberry Pi logo in the header (pulsing in Batocera, bobbing in ES-DE)

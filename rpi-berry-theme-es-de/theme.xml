@@ -59,6 +59,16 @@
 
         <!-- ANIMATION 3: blinking PWR / ACT board LEDs (animated GIF) -->
 
+        <!-- dark strip so the button prompts stay readable over the busy background -->
+        <image name="helpPanel">
+            <path>./art/solid.png</path>
+            <pos>0 0.925</pos>
+            <size>1 0.075</size>
+            <color>000000A0</color>
+            <stationary>always</stationary>
+            <zIndex>9</zIndex>
+        </image>
+
         <helpsystem name="help">
             <pos>0.5 0.96</pos>
             <origin>0.5 0.5</origin>
