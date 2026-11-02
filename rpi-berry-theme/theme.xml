@@ -20,7 +20,7 @@
     <!-- Static picture shown behind the video (also the fallback
          if your device can't play the video) -->
     <image name="bg_still" extra="true">
-      <path>./art/background.jpg</path>
+      <path>./art/bg/bg_collage.jpg</path>
       <pos>0 0</pos>
       <size>1 1</size>
       <zIndex>0</zIndex>
@@ -28,7 +28,7 @@
 
     <!-- THE ANIMATION: looping video (main screen only, so it never competes with game videos) -->
     <video name="bg_video" extra="true">
-      <path>./art/background.mp4</path>
+      <path>./art/bg/bg_collage.mp4</path>
       <pos>0 0</pos>
       <size>1 1</size>
       <delay>0</delay>
@@ -143,7 +143,7 @@
   <view name="basic, detailed, video">
 
     <image name="bg_still" extra="true">
-      <path>./art/background.jpg</path>
+      <path>./art/bg/bg_collage.jpg</path>
       <pos>0 0</pos>
       <size>1 1</size>
       <zIndex>0</zIndex>
@@ -215,6 +215,7 @@
     <!-- Left panel behind the game list -->
     <image name="list_panel" extra="true">
       <path>./art/panel.png</path>
+      <color>FFFFFFD8</color>
       <color>FFFFFF9A</color>
       <pos>0.03 0.16</pos>
       <size>0.47 0.66</size>
@@ -244,6 +245,7 @@
     <!-- Right side: picture/video + description -->
     <image name="media_panel" extra="true">
       <path>./art/panel.png</path>
+      <color>FFFFFFD8</color>
       <color>FFFFFF9A</color>
       <pos>0.53 0.16</pos>
       <size>0.44 0.66</size>
@@ -314,7 +316,7 @@
   <!-- ===================== GRID VIEW (simple) ===================== -->
   <view name="grid">
     <image name="bg_still" extra="true">
-      <path>./art/background.jpg</path>
+      <path>./art/bg/bg_collage.jpg</path>
       <pos>0 0</pos>
       <size>1 1</size>
       <zIndex>0</zIndex>

@@ -37,15 +37,6 @@
     <!-- ============ Things shown in BOTH the system and game list views ============ -->
     <view name="system, gamelist">
 
-        <!-- still picture (also what you see if the video can't play) -->
-        <image name="backgroundStill">
-            <path>./art/background.jpg</path>
-            <pos>0 0</pos>
-            <size>1 1</size>
-            <stationary>always</stationary>
-            <zIndex>0</zIndex>
-        </image>
-
         <!-- header bar -->
         <image name="headerBar">
             <path>./art/solid.png</path>
@@ -78,14 +69,15 @@
         </helpsystem>
     </view>
 
-    <!-- ANIMATED BACKGROUND.  Choose in UI Settings > Theme variant:
+    <!-- ANIMATED BACKGROUND (main screen = all the Pis together, console pages = that console's Pi).  Choose in UI Settings > Theme variant:
          animated    = video on the main screen only (default, light)
          animatedAll = animated product video behind each console's game list (heavier)
          still       = no video at all (fastest) -->
     <variant name="animated, animatedAll">
         <view name="system">
+
             <video name="backgroundVideo">
-                <path>./art/background.mp4</path>
+                <path>./art/bg/bg_collage.mp4</path>
                 <pos>0 0</pos>
                 <size>1 1</size>
                 <audio>false</audio>
@@ -101,6 +93,15 @@
     <!-- ===================== SYSTEM (main) SCREEN ===================== -->
     <view name="system">
 
+        <!-- MAIN SCREEN BACKGROUND: every Raspberry Pi together (art/bg/bg_collage.jpg).
+             The animated version of this is in the variant block above. -->
+        <image name="backgroundStill">
+            <path>./art/bg/bg_collage.jpg</path>
+            <pos>0 0</pos>
+            <size>1 1</size>
+            <stationary>always</stationary>
+            <zIndex>0</zIndex>
+        </image>
 
         <!-- Dark strip behind the carousel so it stays readable over the photo -->
         <image name="carouselBand">
@@ -155,6 +156,16 @@
 
     <!-- ===================== GAME LIST SCREEN ===================== -->
     <view name="gamelist">
+
+        <!-- still background -->
+        <image name="backgroundStill">
+            <path>./art/bg/bg_collage.jpg</path>
+            <pos>0 0</pos>
+            <size>1 1</size>
+            <stationary>always</stationary>
+            <zIndex>0</zIndex>
+        </image>
+
 
         <!-- A different Raspberry Pi product behind each console (art/bg/<system>.jpg) -->
         <image name="productStill">

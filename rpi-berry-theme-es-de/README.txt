@@ -4,7 +4,11 @@ INSTALL
  1. Copy this folder ("rpi-berry-theme-es-de") into  ~/ES-DE/themes/
     (older ES-DE versions: ~/.emulationstation/themes/)
  2. Restart ES-DE, then Menu > UI Settings > Theme set > Raspberry Circuit
- 3. Optional: "Theme color scheme" (raspberry / leaf) and "Theme transitions"
+ 3. Optional, same menu:
+      Theme variant = Animated (main screen) / Animated (also console pages)
+                      / Still background (fastest)
+      Theme color scheme = raspberry / leaf
+      Theme transitions = berry fade
 
 TEST IT WITH DEBUG OUTPUT (AppImage):
     chmod +x ES-DE*.AppImage
@@ -14,23 +18,20 @@ TEST IT WITH DEBUG OUTPUT (AppImage):
  (changes to capabilities.xml need a restart).
 
 WHAT YOU GET
- - 30 second looping background: Raspberry Pi boards floating on pure black
+ - MAIN SCREEN: a 30 second looping background with ALL the Raspberry Pi
+   products floating together (Pi 5, Pi 4, Pi 400, Pi 500, Pi 500+, CM4,
+   CM5 + IO board, Pico 2, Pico W, Zero, Zero 2 W).
+ - EACH CONSOLE PAGE: that console's own Raspberry Pi behind the game list
+   (art/bg/<system>.jpg). With "Animated (also console pages)" it floats
+   and glows as a video (art/products/<pi>.mp4).
  - Console picture for about 200 systems (art/systems/<system>.png)
- - Game lists: a different Raspberry Pi product behind each console
  - Bobbing Raspberry Pi logo, fade transitions between screens
 
-A DIFFERENT RASPBERRY PI PER CONSOLE
- Open a console and the game list background is a real Raspberry Pi product:
- Pi 400/500/500+ (retro computers), Pico/Zero boards (handhelds), and Pi 5,
- Pi 4, Compute Module 4/5 and CM5 IO board (everything else).
- The picture is art/bg/<system>.jpg. To change a console's Pi, replace that
- file with any other file from art/bg/. Photos: Raspberry Pi documentation
- (CC BY-SA 4.0), cut out and composited for this theme.
-
-THEME VARIANT (Menu > UI Settings > Theme variant)
- Animated main screen, product photo per console  (default, light)
- Animated everywhere, product video per console   (heavier)
- Still backgrounds                                 (fastest - pick this if it lags)
+TWEAKS
+ - Change the Pi behind a console: copy another picture over
+   art/bg/<system>.jpg, and point bgv/<system>.xml at another video in
+   art/products/ if you use the animated console pages.
+ - If it lags, pick "Still background" in Theme variant.
 
 RETROACHIEVEMENTS
  ES-DE has no RetroAchievements feature (it is handled inside RetroArch),
@@ -38,4 +39,6 @@ RETROACHIEVEMENTS
 
 CREDITS
  Console pictures: ES-DE-System-Icon-Set by Zoidburg13 (CC0).
- Raspberry Pi logo: trademark of Raspberry Pi Ltd - personal use.
+ Product photos: Raspberry Pi documentation (github.com/raspberrypi/documentation),
+ (c) Raspberry Pi Ltd. Raspberry Pi logo: trademark of Raspberry Pi Ltd.
+ Personal use - check their rules before redistributing.
