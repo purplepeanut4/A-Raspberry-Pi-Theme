@@ -61,6 +61,34 @@ Only the Batocera version has this. ES-DE has no RetroAchievements at all (Retro
 
 In Batocera you log in under START → Game Settings → RetroAchievements. The theme then displays your username alongside a trophy on the main screen. It's using the Batocera theme conditions of `if="${global.cheevos}"` (you're logged in) and `if="${system.cheevos}"` (the system supports achievements). I wasn't able to test these on a device so if the trophy doesn't show up then please open an issue with your Batocera version.
 
+## Keeping the theme up to date
+
+Whenever the theme is updated here, these small scripts in the tools folder fetch the new version for you. The repo needs to stay public for them to work, and an update replaces the theme folder so back up any edits you've made to the theme files first.
+
+### Batocera
+1. Copy tools/update-theme-batocera.sh to /userdata/system/ (on the network share that is \\BATOCERA\share\system\).
+2. Run it by hand over SSH with `bash /userdata/system/update-theme-batocera.sh` to try it. It downloads the theme only when something has changed, and tells you if you are already up to date.
+3. To check automatically at every boot, create /userdata/system/custom.sh containing:
+
+```bash
+#!/bin/bash
+if [ "$1" = "start" ]; then
+    (sleep 45; /bin/bash /userdata/system/update-theme-batocera.sh > /userdata/system/theme-update.log 2>&1) &
+fi
+```
+
+A new version is installed in the background after boot, so restart EmulationStation (START, Quit, Restart EmulationStation) to see it. If an update fails your current theme is left alone, and the reason is in /userdata/system/theme-update.log.
+
+If you would rather run it from the menu, copy the script to /userdata/roms/ports/ and it will show up in the Ports system after a restart.
+
+### ES-DE (Linux and macOS, needs git)
+- Run `./tools/update-theme-es-de.sh` the first time and whenever you want to update. It keeps a copy of the repo in ~/.local/share/rpi-circuit-theme and links the theme into ~/ES-DE/themes/ for you.
+- Or start ES-DE through `./tools/launch-es-de.sh /path/to/ES-DE.AppImage` and it checks for an update every time before opening ES-DE.
+- If you copied the theme folder in by hand earlier, move it away first. If ES-DE does not show the linked theme, run the script with `COPY=1` in front to copy the files instead of linking them.
+
+### What about the built-in theme downloaders?
+ES-DE's Theme Downloader updates themes using git too, but it only lists themes from its official themes list, so a personal theme isn't in there unless the ES-DE team accepts it. I believe Batocera's built-in theme installer works the same way with a curated list. These scripts do the same job for this repo without needing to be on either list.
+
 ## Customising
 
 theme.xml is commented and written for the beginner. pos and size are screen fractions and colours are 6-digit hex (no #).
